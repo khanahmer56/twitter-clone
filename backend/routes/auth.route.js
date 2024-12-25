@@ -5,11 +5,11 @@ import {
   logout,
   signup,
 } from "../controllers/auth.controller.js";
-import { proectedRoute } from "../middleware/protectedRoute.js";
+import { protectedRoute } from "../middleware/protectedRoute.js";
 
 const router = express.Router();
 
-router.get("/me", proectedRoute, getUser);
+router.get("/me", protectedRoute, getUser);
 
 router.post("/signup", signup);
 
